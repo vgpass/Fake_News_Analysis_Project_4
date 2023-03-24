@@ -1,4 +1,4 @@
-# **project_4**
+# **Identifying Fake News**
 
 ## ***Repo for project 4***
 
