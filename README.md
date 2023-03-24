@@ -16,7 +16,10 @@
 
 ## POSSIBLE TOPICS
 
--breast cancer detection
--maternal mortality
--organ transplant percentage
--diabetes detection in eye scans
+* breast cancer detection
+
+* maternal mortality
+
+* organ transplant percentage
+
+* diabetes detection in eye scans
