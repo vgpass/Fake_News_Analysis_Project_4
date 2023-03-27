@@ -35,6 +35,6 @@ Our data set contains 6,335 articles. Of those articles, 3171 are real and 3164 
 Display of unique words in titles and articles
 <br></br>
 
-![Unique Words](images/Unique%20words.png)
+![Unique Words](images/unique_words.png)
 
 
