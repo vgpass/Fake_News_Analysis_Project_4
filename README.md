@@ -27,5 +27,14 @@
 *Conclusion*: The proposed project will contribute to the development of accurate tools for identifying fake news and help to combat the spread of misinformation on social media platforms. The machine learning model developed through this project could be used by news organizations, social media platforms, and individuals to distinguish between real and fake news articles, thus promoting informed decision-making and reducing the spread of misinformation.
 
 Our data set contains 6,335 articles. Of those articles, 3171 are real and 3164 are fake.
+<br></br>
 
-![Article Classifications](images/output.png)
+![Article Classification](images/article_count.png)
+<br></br>
+
+Display of unique words in titles and articles
+<br></br>
+
+![Unique Words](images/Unique%20words.png)
+
+
