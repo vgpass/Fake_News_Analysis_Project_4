@@ -26,7 +26,26 @@
 
 *Conclusion*: The proposed project will contribute to the development of accurate tools for identifying fake news and help to combat the spread of misinformation on social media platforms. The machine learning model developed through this project could be used by news organizations, social media platforms, and individuals to distinguish between real and fake news articles, thus promoting informed decision-making and reducing the spread of misinformation.
 
-
 Our data set contains 6,335 articles. Of those articles, 3171 are real and 3164 are fake.
+<br></br>
 
-![Article Classifications](images/output.png)
+![Article Classification](images/article_count.png)
+<br></br>
+
+Display of unique words in titles and articles
+<br></br>
+
+![Unique Words](images/unique_words.png)
+
+Our dataset was cleaned using the Natural Language Toolkit (NLTK). First, all unwanted characters, numbers, and symbols were removed. Then all words were converted to lowercase. Stopwords were removed, that is words like 'a', 'the', 'in', 'is', etc. The dataframe then underwent lemmatisation, the process where words are reduced to their simplest inflected form. For example, 'kites' gets changed to 'kite'. 'Babies' would be changed to 'baby'.
+
+Once we were satisfied with the state of our cleaned dataframe, we split the data into training and test sets using a default 75/25 split. Then both sets were transformed using a scikit-learn feature called TfidfVectorizer. This feature creates a matrix of Term Frequency-Inverse Document Frequency. In simple terms, words are given proportional relevance for the number of times they appear in a text, and then this relevance is compensated by the word's frequency in the entire data set.
+
+Several models were then used to train and test the data. The first was a logistic regression model, which showed a model accuracy of 91.55%
+<br></br>
+
+![Logistic Regression](images/classification%20report%20-%20lr.png)
+
+Training and Testing results for the logistic model are displayed below.
+
+![LogosticRegression Plot](images/download%20(1).png)
