@@ -17,7 +17,7 @@ body, html {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../static/20230327_091555.jpg");
   
     /* Set a specific height */
-    height: 50%;
+    height: 40%;
   
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
@@ -36,6 +36,23 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
   }
+
+a:link {
+color: #ffffff;
+text-decoration: none;
+}
+a:visited {
+color: #fc0101;
+text-decoration: none;
+}
+a:hover {
+color: #fff700;
+text-decoration: none;
+}
+a:active {
+color: #1cc933;
+text-decoration: none;
+}
 
 
 .material-icon-outlined {
@@ -240,6 +257,10 @@ body, html {
     font-weight: 600;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+}
 
 /* ------------------ MEDIA QUERIES ------------------------- */
 
