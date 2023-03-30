@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>FAKE NEWS MACHINE LEARNING</title>
+
+
+        <!-- PT SANS FONT -->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Montaga&family=Montserrat:wght@100;300;400;500;600;700;800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>NEWS ARTICLE DATA SET</h1>
+                 <p>PROJECT 4</p>
+            </div>
+        </div>
+        <div class="grid-container">
+            
+            <!-- Header -->
+            <header class="header">
+                <div class="menu-icon" onclick="openSidebar()">
+                    <span class="material-icons-outlined">menu</span>
+                </div>
+                <div class="header-left">
+                    <span class="material-icons-outlined">search </span>
+                </div>
+                <div class="header-right">
+                    <span class="material-icons-outlined">notifications</span>
+                    <span class="material-icons-outlined">email</span>
+                    <span class="material-icons-outlined">account_circle</span>
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        <span class="material-icons-outlined">inventory</span>FAKE NEWS 
+                    </div>
+                    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+                </div>
+
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">dashboard</span>
+                        <a href="home.html">DASHBOARD</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">fact_check</span>
+                        <a href="common.html">Most Common Words</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">menu_book</span>
+                        <a href="articles.html">Article Data Set</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_top</span>MAX WORDS
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_bottom</span>MIN WORDS
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">poll</span>Reports
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">settings</span>Settings
+                    </li>
+                </ul>
+                <br></br>
+                <ul class="member-list">
+                    <p class="member-list-item">TEAM MEMBERS</p>
+                    <li class="member-list-item">Bruce Chang</li>
+                    <li class="member-list-item">Haithem Elmesallati</li>
+                    <li class="member-list-item">Jonathan Rico</li>
+                    <li class="member-list-item">Tuan Hoang</li>
+                    <li class="member-list-item">Ivan Villa</li>
+                    <li class="member-list-item">Vincent Passanisi</li>
+            </aside>
+            <!-- End Sidebar -->
+
+            <!-- Main -->
+            <main class="main-container">
+                <div class="main-title">
+                  <p class="font-weight-bold">NEWS ARTICLES IN DATA SET</p>  
+                </div>
+
+                <div class="charts">
+
+                    <div class='tableauPlaceholder' id='viz1680143584202' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;TestBook1_16799783376240&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TestBook1_16799783376240&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;TestBook1_16799783376240&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1680143584202');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+                </div>
+            </main>
+            <!-- End Main-->
+            </div>
+            <!-- Scripts -->
+            <!-- ApexCharts  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"></script>
+        <!-- Custom JS -->
+        <script src="../static/scripts.js"></script>
+    </body>
+</html>
