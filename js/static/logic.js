@@ -3,6 +3,48 @@
 
 // define url to constant
 const url = "../Resources/news.csv"
+function pageBuilder(sampleId) {
+// Fetch the JSON data and console log it
+d3.csv(url).then(function(data) {
+  console.log(data);
+
+  ids = []
+  for (let i = 0; i < data.length; i++) {
+    ids.push(data[i].id)
+      console.log(ids)
+  };
+
+  const selectedSample = data.id.find(O => O.id==sampleId);
+    console.log(selectedSample);
+  // const selectedMeta = data.metadata.find(W => W.id==sampleId);
+  //   console.log(selectedMeta);
+
+})};
+
+function initBB() {
+  let choice = d3.select("#selDataset")
+  d3.csv(url).then(function(data) {
+      let ids = data.id;
+      let titles = data.title;
+      let article = data.text;
+      let tyoe = data.label
+      ids.forEach(sampleId => {choice.append("option").text(sampleId).property("value", sampleId)
+      });
+      console.log(ids);
+
+  });
+  pageBuilder(8476);
+};
+
+// Function to update charts when a new ID is selected.
+function optionChanged(sampleId) {
+  pageBuilder(sampleId);
+  console.log(sampleId);
+}
+
+initBB();
+
+// })};
 // Promise Pending
 // const dataPromise = d3.json(url);
 // console.log("Data Promise: ", dataPromise);
@@ -18,18 +60,18 @@ const url = "../Resources/news.csv"
 //   console.log(data);
 // // Function to build charts on initial load and again when a new test subject is selected
 // });
-function pageBuilder(sampleId) {
-// Fetch the JSON data and console log it
-d3.csv(url).then(function(data) {
-  console.log(data);
+// function pageBuilder(sampleId) {
+// // Fetch the JSON data and console log it
+// d3.csv(url).then(function(data) {
+//   console.log(data);
 
 
-  const selectedSample = data.id.find(O => O.id==sampleId);
-    console.log(selectedSample);
+//   const selectedSample = data.id.find(O => O.id==sampleId);
+//     console.log(selectedSample);
   // const selectedMeta = data.metadata.find(W => W.id==sampleId);
   //   console.log(selectedMeta);
 
-})};
+
 //   // Update panel with test subject metadata
 //   let infoBox = d3.select("#sample-metadata").text("");
 //     Object.entries(selectedMeta).forEach(([key, value]) => {
@@ -120,25 +162,4 @@ d3.csv(url).then(function(data) {
 // });
 // }
 
-function initBB() {
-  let choice = d3.select("#selDataset")
-  d3.csv(url).then(function(data) {
-      let ids = data.id;
-      let titles = data.title;
-      let article = data.text;
-      let tyoe = data.label
-      ids.forEach(sampleId => {choice.append("option").text(sampleId).property("value", sampleId)
-      });
-      console.log(ids);
 
-  });
-  pageBuilder(8476);
-};
-
-// Function to update charts when a new ID is selected.
-function optionChanged(sampleId) {
-  pageBuilder(sampleId);
-  console.log(sampleId);
-}
-
-initBB();
