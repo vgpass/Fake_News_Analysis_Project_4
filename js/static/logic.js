@@ -2,11 +2,11 @@
 
 
 // define url to constant
-const url = "../Resources/news.json"
+const url = "../news.json"
 function pageBuilder(sampleId) {
 // Fetch the JSON data and console log it
 d3.json(url).then(function(data) {
-  console.log(data);
+  console.log(data.id);
 
   // ids = []
   // for (let i = 0; i < data.length; i++) {

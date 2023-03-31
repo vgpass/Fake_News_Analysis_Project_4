@@ -82,7 +82,26 @@
                 <div class="main-title">
                   <p class="font-weight-bold">Model #2 - Linear Support Vector</p>  
                 </div>
-                <table>
+                
+                <div class="text-card">
+                  <div class="text-container">
+                    <p>
+                      For the fake news detection analysis, we use Pandas to read in our data (in the form of a csv file) and transform it into a dataframe. From there, we separate our desired test feature (`cleaned_text` for two of the tests and `cleaned_title` for the other tests) column from the dataframe and assign it into a variable, as well as assign a variable to the target column (which determines whether an article is real `0` or fake `1`). Using sklearn's train_test_split feature, we create our training and test data for the models.
+                    </p>
+                    <p></p><p>
+                      Since we are testing on words used in each article, we use sklearn's TdifVectorizer feature, which measures the originality of a word by comparing the number of times a word appears in document with the number of documents the word appears in (document in this case would refer to the feature we are currently testing). TdifVectorizer works by looking at the frequency of each word, but not the context in which it is used, adding more emphasis on less frequently used words, to avoid overly emphasizing commonly used words such as `the`.
+                    </p><p>
+                      Once our data is vectorized for each feature we are testing on, we can fit our data into our models. And finally we can view our models' performance using scikit learn's classification report feature, as well as check the prediction results (true positives/negatives, false positive/negatives) from each model. 
+                      Our classification report gives us each model's stats as:
+                    </p><p>
+                      Precision - The ratio of True Positives/(True Positives+False Positives)
+                      Recall - The ratio True Positives/(True Positives+False Negatives)
+                      F1 score - F1 is an average of the sum of both the recall and precision score, it represents the accuracy of our model
+                      Support - Support is the number of actual occurrences of the class in the dataset (our testing data). It does not vary between models, it just diagnoses the performance evaluation process.
+                      </p>
+                  </div>
+                </div>
+                <table width="1700" height="400" border="1" cellpadding="10">
                     <thead>
                       <tr>
                         <th></th>
