@@ -93,13 +93,30 @@
                     </p><p>
                       Once our data is vectorized for each feature we are testing on, we can fit our data into our models. And finally we can view our models' performance using scikit learn's classification report feature, as well as check the prediction results (true positives/negatives, false positive/negatives) from each model. 
                       Our classification report gives us each model's stats as:
-                    </p><p>
-                      Precision - The ratio of True Positives/(True Positives+False Positives)
-                      Recall - The ratio True Positives/(True Positives+False Negatives)
-                      F1 score - F1 is an average of the sum of both the recall and precision score, it represents the accuracy of our model
-                      Support - Support is the number of actual occurrences of the class in the dataset (our testing data). It does not vary between models, it just diagnoses the performance evaluation process.
+                    </p>
+                      <li class="list-item"><b>Precision</b> - The ratio of True Positives/(True Positives+False Positives)</li>
+                      <br>
+                      <li class="list-item"><b>Recall</b> - The ratio True Positives/(True Positives+False Negatives)</li>
+                      <br>
+                      <li class="list-item"><b> F1 score</b> - F1 is an average of the sum of both the recall and precision score, it represents the accuracy of our model</li>
+                      <br>
+                      <li class="list-item"><b>Support</b> - Support is the number of actual occurrences of the class in the dataset (our testing data). It does not vary between models, it just diagnoses the performance evaluation process.</li>
                       </p>
                   </div>
+                </div>
+                <br>
+                <div class="main-title">
+                  <p class="font-weight-bold">Confusion Matrix</p>  
+                </div>
+                  <div class="text-card">
+                    <div class="image-container">
+                    <img src="../static/confuse2.png" alt="My Image"/>
+                    </div>
+                  </div>
+                <br>
+                <br>
+                <div class="main-title">
+                  <p class="font-weight-bold">Classification Report</p>  
                 </div>
                 <table width="1700" height="400" border="1" cellpadding="10">
                     <thead>
@@ -114,29 +131,36 @@
                     <tbody>
                       <tr>
                         <td>0</td>
-                        <td>0.95</td>
-                        <td>0.93</td>
-                        <td>0.94</td>
-                        <td>802</td>
+                        <td>0.98</td>
+                        <td>0.97</td>
+                        <td>0.98</td>
+                        <td>6211</td>
                       </tr>
                       <tr>
                         <td>1</td>
-                        <td>0.93</td>
-                        <td>0.95</td>
-                        <td>0.94</td>
-                        <td>782</td>
+                        <td>0.97</td>
+                        <td>0.98</td>
+                        <td>0.98</td>
+                        <td>6598</td>
                       </tr>
                       <tr>
-                        <td colspan="4">Accuracy</td>
-                        <td>0.94</td>
+                        <td colspan="3">Accuracy</td>
+                        <td>0.98</td>
+                        <td>12809</td>
                       </tr>
                       <tr>
-                        <td colspan="4">Macro Avg</td>
-                        <td>0.94</td>
+                        <td colspan="1">Macro Avg</td>
+                        <td>0.98</td>
+                        <td>0.98</td>
+                        <td>0.98</td>
+                        <td>12809</td>
                       </tr>
                       <tr>
-                        <td colspan="4">Weighted Avg</td>
-                        <td>0.94</td>
+                        <td colspan="1">Weighted Avg</td>
+                        <td>0.98</td>
+                        <td>0.98</td>
+                        <td>0.98</td>
+                        <td>12809</td>
                       </tr>
                     </tbody>
                   </table>
