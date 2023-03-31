@@ -2,47 +2,47 @@
 
 
 // define url to constant
-const url = "../Resources/news.json"
-function pageBuilder(sampleId) {
+const url = "uci_bootcamp/Fake_News_Analysis_Project_4/Resources/news.json"
+// function pageBuilder(sampleId) {
 // Fetch the JSON data and console log it
 d3.json(url).then(function(data) {
   console.log(data);
-
+});
   // ids = []
   // for (let i = 0; i < data.length; i++) {
   //   ids.push(data[i].id)
   //     console.log(ids)
   // };
 
-  const selectedSample = data.id.find(O => O.id==sampleId);
-    console.log(selectedSample);
-  // const selectedMeta = data.metadata.find(W => W.id==sampleId);
-  //   console.log(selectedMeta);
+//   const selectedSample = data.id.find(O => O.id==sampleId);
+//     console.log(selectedSample);
+//   // const selectedMeta = data.metadata.find(W => W.id==sampleId);
+//   //   console.log(selectedMeta);
 
-})};
+// })};
 
-function initBB() {
-  let choice = d3.select("#selDataset")
-  d3.json(url).then(function(data) {
-      let ids = data.id;
-      let titles = data.title;
-      let article = data.text;
-      let tyoe = data.label
-      ids.forEach(sampleId => {choice.append("option").text(sampleId).property("value", sampleId)
-      });
-      // console.log(ids);
+// function initBB() {
+//   let choice = d3.select("#selDataset")
+//   d3.json(url).then(function(data) {
+//       let ids = data.id;
+//       let titles = data.title;
+//       let article = data.text;
+//       let tyoe = data.label
+//       ids.forEach(sampleId => {choice.append("option").text(sampleId).property("value", sampleId)
+//       });
+//       // console.log(ids);
 
-  });
-  pageBuilder(8476);
-};
+//   });
+//   pageBuilder(8476);
+// };
 
-// Function to update charts when a new ID is selected.
-function optionChanged(sampleId) {
-  pageBuilder(sampleId);
-  console.log(sampleId);
-}
+// // Function to update charts when a new ID is selected.
+// function optionChanged(sampleId) {
+//   pageBuilder(sampleId);
+//   console.log(sampleId);
+// }
 
-initBB();
+// initBB();
 
 // })};
 // Promise Pending
