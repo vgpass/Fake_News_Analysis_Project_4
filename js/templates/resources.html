@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>FAKE NEWS MACHINE LEARNING</title>
+
+
+        <!-- PT SANS FONT -->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Montaga&family=Montserrat:wght@100;300;400;500;600;700;800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>FAKE NEWS MACHINE LEARNING</h1>
+                 <p>PROJECT 4</p>
+            </div>
+        </div>
+        <div class="grid-container">
+            
+            <!-- Header -->
+            <header class="header">
+                <div class="menu-icon" onclick="openSidebar()">
+                    <span class="material-icons-outlined">menu</span>
+                </div>
+                <div class="header-left">
+                    <span class="material-icons-outlined">search </span>
+                </div>
+                <div class="header-right">
+                    <span class="material-icons-outlined">notifications</span>
+                    <span class="material-icons-outlined">email</span>
+                    <span class="material-icons-outlined">account_circle</span>
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        <span class="material-icons-outlined">inventory</span>FAKE NEWS 
+                    </div>
+                    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+                </div>
+
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">dashboard</span>
+                        <a href="home.html">DASHBOARD</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">fact_check</span>
+                        <a href="common.html">Most Common Words</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">menu_book</span>
+                        <a href="articles.html">Article Data Set</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_top</span>MAX WORDS
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_bottom</span>MIN WORDS
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">poll</span>Reports
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">settings</span>Settings
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">content_paste_search</span>
+                        <a href="resources.html">Resources</a>
+                    </li>
+                </ul>
+                <br></br>
+                <ul class="member-list">
+                    <p class="member-list-item">TEAM MEMBERS</p>
+                    <li class="member-list-item">Bruce Chang</li>
+                    <li class="member-list-item">Haithem Elmesallati</li>
+                    <li class="member-list-item">Jonathan Rico</li>
+                    <li class="member-list-item">Tuan Hoang</li>
+                    <li class="member-list-item">Ivan Villa</li>
+                    <li class="member-list-item">Vincent Passanisi</li>
+            </aside>
+            <!-- End Sidebar -->
+
+            <!-- Main -->
+            <main class="main-container">
+                <div class="main-title">
+                  <p class="font-weight-bold">RESOURCES</p>  
+                </div>
+
+                <div class="main-cards">
+
+                    <div class="card">
+                        <div class="card-header">
+                            Data Sets
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <a href="https://www.kaggle.com/datasets/abhayku2002/detection-of-fake-news">Kaggle: Detection of Fake News</a>
+                            <br/>
+                            <br/>
+                            <a href="https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset?select=Fake.csv">Kaggle: Fake and real news dataset</a>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            Website Tools
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">HTML</li>
+                            <li class="list-group-item">CSS</li>
+                            <li class="list-group-item">Flask</li>
+                            <li class="list-group-item">JavaScript</li>
+                            <li class="list-group-item">ApexCharts</li>
+                            <li class="list-group-item">Google Fonts</li>
+                        </ul>  
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            Machine Learning Tools
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Pandas</li>
+                            <li class="list-group-item">Matplotlib</li>
+                            <li class="list-group-item">TensorFlow</li>
+                            <li class="list-group-item">Scikit-Learn</li>
+                            <li class="list-group-item">Pathlib</li>
+                            <li class="list-group-item">Natural Language Toolkit</li>
+                        </ul>  
+                    </div>
+                </div>
+            
+            </main>
+            <!-- End Main-->
+            </div>
+            <!-- Scripts -->
+            <!-- ApexCharts  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"></script>
+        <!-- Custom JS -->
+        <script src="../static/scripts.js"></script>
+    </body>
+</html>
