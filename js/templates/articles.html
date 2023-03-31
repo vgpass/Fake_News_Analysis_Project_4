@@ -20,7 +20,7 @@
     <body>
         <div class="hero-image">
             <div class="hero-text">
-                <h1>NEWS ARTICLE DATA SET</h1>
+                <h1>NEWS ARTICLE DATA SET & CLEANING</h1>
                  <p>PROJECT 4</p>
             </div>
         </div>
@@ -80,9 +80,27 @@
             <!-- Main -->
             <main class="main-container">
                 <div class="main-title">
-                  <p class="font-weight-bold">NEWS ARTICLES IN DATA SET</p>  
+                  <p class="font-weight-bold">DATA CLEANING</p>  
                 </div>
 
+                <div class="text-card">
+                    <div class="text-container">
+                      <p>
+                        Our dataset was cleaned using the Natural Language Toolkit (NLTK). First, all unwanted characters, numbers, and symbols were removed. Then all words were converted to lowercase. Stopwords were removed, that is words like 'a', 'the', 'in', 'is', etc. The dataframe then underwent lemmatisation, the process where words are reduced to their simplest inflected form. For example, 'kites' gets changed to 'kite'. 'Babies' would be changed to 'baby'.
+                      </p><p>
+                        Once we were satisfied with the state of our cleaned dataframe, we split the data into training and test sets using a default 75/25 split. Then both sets were transformed using a scikit-learn feature called TfidfVectorizer. This feature creates a matrix of Term Frequency-Inverse Document Frequency. In simple terms, words are given proportional relevance for the number of times they appear in a text, and then this relevance is compensated by the word's frequency in the entire data set.
+                        </p><p>
+                        Several models were then used to train and test the data. The first was a logistic regression model, which showed a model accuracy of 91.55%. Subsequent models showed an accuracy of as high as 98% in identifying fake news articles from real ones.
+                      </p>
+
+                    </div>
+                  </div>
+                  <br>
+
+                  <main class="main-container">
+                    <div class="main-title">
+                      <p class="font-weight-bold">NEWS ARTICLES IN DATA SET</p>  
+                    </div>
                 <div class="charts">
 
                     <div class='tableauPlaceholder' id='viz1680143584202' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;TestBook1_16799783376240&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TestBook1_16799783376240&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;TestBook1_16799783376240&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1680143584202');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
