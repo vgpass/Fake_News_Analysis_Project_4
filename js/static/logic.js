@@ -2,12 +2,13 @@
 
 
 // define url to constant
-const url = "uci_bootcamp/Fake_News_Analysis_Project_4/Resources/news.json"
-// function pageBuilder(sampleId) {
+
+const url = "../news.json"
+function pageBuilder(sampleId) {
 // Fetch the JSON data and console log it
 d3.json(url).then(function(data) {
-  console.log(data);
-});
+  console.log(data.id);
+})};
   // ids = []
   // for (let i = 0; i < data.length; i++) {
   //   ids.push(data[i].id)
