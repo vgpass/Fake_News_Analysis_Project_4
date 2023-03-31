@@ -21,6 +21,7 @@
         <div class="hero-image">
             <div class="hero-text">
                 <h1>FAKE NEWS MACHINE LEARNING</h1>
+                <h3>Results Model #2</h3>
                  <p>PROJECT 4</p>
             </div>
         </div>
@@ -50,7 +51,6 @@
                     </div>
                     <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
                 </div>
-
                 <ul class="sidebar-list">
                     <li class="sidebar-list-item">
                         <span class="material-icons-outlined">dashboard</span>
@@ -99,70 +99,50 @@
             <!-- Main -->
             <main class="main-container">
                 <div class="main-title">
-                  <p class="font-weight-bold">FAKE NEWS DASHBOARD</p>  
+                  <p class="font-weight-bold">Model #2 - Linear Support Vector</p>  
                 </div>
-
-                <div class="main-cards">
-
-                    <div class="card">
-                        <div class="card-inner">
-                            <p class="text-primary">AVG WORD COUNT - TITLES</p>
-                            <span class="material-icons-outlined text-blue">fact_check</span>
-                        </div>
-                        <span class="text-primary font-weight-bold">8</span>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-inner">
-                            <p class="text-primary">AVG WORD COUNT - ARTICLES</p>
-                            <span class="material-icons-outlined text-orange">menu_book</span>
-                        </div>
-                        <span class="text-primary font-weight-bold">436</span>   
-                    </div>
-
-                    <div class="card">
-                        <div class="card-inner">
-                            <p class="text-primary">MAX WORD COUNT - ARTICLES</p>
-                            <span class="material-icons-outlined text-red">vertical_align_top</span>
-                        </div>
-                        <span class="text-primary font-weight-bold">10,320</span>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-inner">
-                            <p class="text-primary">MIN WORD COUNT - ARTICLES</p>
-                            <span class="material-icons-outlined text-green">vertical_align_bottom</span>
-                        </div>
-                        <span class="text-primary font-weight-bold">0</span>
-                    </div>
-
-                </div>
-
+                <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Precision</th>
+                        <th>Recall</th>
+                        <th>F1-score</th>
+                        <th>Support</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0</td>
+                        <td>0.95</td>
+                        <td>0.93</td>
+                        <td>0.94</td>
+                        <td>802</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>0.93</td>
+                        <td>0.95</td>
+                        <td>0.94</td>
+                        <td>782</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">Accuracy</td>
+                        <td>0.94</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">Macro Avg</td>
+                        <td>0.94</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">Weighted Avg</td>
+                        <td>0.94</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
                 <div class="charts">
 
-                    <div class="charts-card">
-                        <p class="charts-title">Number of Articles in the Data Set</p>
-                        <div id="bar-chart"></div>
-                    </div>
-
-                    <div class="charts-card">
-                        <p class="charts-title">Word Counts in Titles and Articles</p>
-                        <div class="image-container">
-                            <img src="../static/unique_words.png" alt="My Image"/>
-                        </div>
-                    </div>
-
-                    <div class="charts-card">
-                        <p class="charts-title">Distribution of Articles by Length</p>
-                        <div class="image-container">
-                            <img src="../static/download (2).png" alt="My Image"/>
-                        </div>
-                    </div>
-
-                    <div class="charts-card">
-                        <p class="charts-title">Distribution of Article Length by Type</p>
-                        <div class="image-container">
-                            <img src="../static/download (3).png" alt="My Image"/>
                         </div>
                     </div>
 
