@@ -232,6 +232,25 @@ table {
     font-size: 30px;
 }
 
+/* Selector Dropdown  */
+
+#selDataset {
+    font-size: 24px;
+}
+
+/* Article Text and Title Styling */
+
+#text {
+    color: black;
+    font-size: 24px;
+}
+
+#title {
+    color: 'black';
+    font-size: 36px;
+}
+
+
 /*  Cards Style Settings */
 .main-cards {
     display: grid;
@@ -350,6 +369,7 @@ img {
     width: 100%;
     object-fit: scale-down;
   }
+
 /* ------------------ MEDIA QUERIES ------------------------- */
 
 /*  Medium <= 992 px  */

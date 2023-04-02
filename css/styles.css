@@ -161,6 +161,10 @@ body, html {
     font-size: 30px;
 }
 
+#selDataset {
+    width: 90px;
+}
+
 .main-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

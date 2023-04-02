@@ -23,7 +23,8 @@
         <div class="hero-image">
             <div class="hero-text">
                 <h1>NEWS ARTICLE DATA SET</h1>
-                 <p>PROJECT 4</p>
+                <h2>Before Cleaning (Sample)</h2> 
+                <p>PROJECT 4</p>
             </div>
         </div>
         <div class="grid-container">
@@ -54,7 +55,7 @@
                 </div>
 
                 <ul class="sidebar-list">
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item-current">
                         <span class="material-icons-outlined">dashboard</span>
                         <a href="home.html">DASHBOARD</a>
                     </li>
@@ -64,19 +65,27 @@
                     </li>
                     <li class="sidebar-list-item">
                         <span class="material-icons-outlined">menu_book</span>
-                        <a href="articles.html">Article Data Set</a>
+                        <a href="article.html">Original Data Set</a>
                     </li>
                     <li class="sidebar-list-item">
-                        <span class="material-icons-outlined">vertical_align_top</span>MAX WORDS
+                        <span class="material-icons-outlined">menu_book</span>
+                        <a href="articles.html">Cleaned Data Set</a>
                     </li>
                     <li class="sidebar-list-item">
-                        <span class="material-icons-outlined">vertical_align_bottom</span>MIN WORDS
+                        <span class="material-icons-outlined">vertical_align_top</span>
+                        <a href="results1.html">Model Results #1</a>
+                    </li>
+                     <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_top</span>
+                        <a href="results2.html">Model Results #2</a>
                     </li>
                     <li class="sidebar-list-item">
-                        <span class="material-icons-outlined">poll</span>Reports
+                        <span class="material-icons-outlined">vertical_align_top</span>
+                        <a href="results3.html">Model Results #3</a>
                     </li>
                     <li class="sidebar-list-item">
-                        <span class="material-icons-outlined">settings</span>Settings
+                        <span class="material-icons-outlined">poll</span>
+                        <a href="resources.html">Resources</a>
                     </li>
                 </ul>
                 <br></br>
@@ -94,19 +103,16 @@
             <!-- Main -->
             <main class="main-container">
                 <div class="main-title">
-                  <p class="font-weight-bold">NEWS ARTICLES IN DATA SET</p>  
+                  <p class="font-weight-bold">SAMPLE OF NEWS ARTICLES IN DATA SET <b>BEFORE CLEANING</b></p>  
                 </div>
 
                 <div class="row">
                     <div class="col-md-2">
                       <div class="well">
-                        <h3>News Article ID No.:</h3>
-                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                        <h2>News Article ID No.:</h2>
+                        <select id="selDataset" onchange="optionChanged(this.value)" style="width: 90px"></select>
                       </div>
-                      <div class="panel panel-primary">
-                        <div class="panel-heading">
-                          <h3 class="panel-title">Article Title</h3>
-                        </div>
+                      <br><br>
                         <div id="sample-metadata" class="panel-body"></div>
                       </div>
                     </div>
@@ -114,15 +120,13 @@
                 <div class="charts">
 
                     <div class="charts-card">
-                        <p class="charts-title">Article Title</Title></p>
-                        <div></div>
+                        <p class="charts-title"><h1><b>Article Title</b></h1></Title></p>
+                        <div id="title"></div>
                     </div>
 
                     <div class="charts-card">
-                        <p class="charts-title">Article Text</p>
-                        <div class="image-container">
-
-                        </div>
+                        <p class="charts-title"><h1><b>Article Text</b></h1></p>
+                        <div id="text"></div>
                     </div>
 
                 </div>
