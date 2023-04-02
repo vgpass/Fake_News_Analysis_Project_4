@@ -105,6 +105,25 @@
                   </div>
                 </div>
                 <br>
+
+            <main class="main-container">
+                <div class="main-title">
+                  <p class="font-weight-bold">LVS Model Results</p>  
+                </div>
+                
+                <div class="text-card">
+                  <div class="text-container">
+                    <p>
+                        After running the linear support vector classifier model on our dataset and making predictions on our testing data, the model was able to categorize which articles were real or fake with a 98% overall accuracy.
+                    </p><p>
+                        Out of the 12,809 test news articles (6,125 real news and 6,684 fake news),
+                        our model correctly predicted that 6,051 of the articles were real and 6,490 of the articles were fake. The model incorrectly categorized 177 real articles as fake news and 91 fake articles as real news.
+                        The model's precision for predicting real articles was 98%, while its precision for predicting fake news was 97%. Our model's recall values were 97% for real news and 99% for fake news.
+                        Overall, the model was equally effective at predicting both fake news and real news, with both categories having a F1 score of 98%.</p>
+                  </div>
+                </div>
+                <br>
+
                 <div class="main-title">
                   <p class="font-weight-bold">Confusion Matrix</p>  
                 </div>
@@ -115,6 +134,7 @@
                   </div>
                 <br>
                 <br>
+
                 <div class="main-title">
                   <p class="font-weight-bold">Classification Report</p>  
                 </div>
@@ -164,10 +184,81 @@
                       </tr>
                     </tbody>
                   </table>
-                  
-                <div class="charts">
+                <main class="main-container">
+                <div class="main-title">
+                  <p class="font-weight-bold">LVS Model Results - Using Titles</p>  
+                </div>
+                
+                <div class="text-card">
+                  <div class="text-container">
+                    <p>
+                      After adapting our linear support vector classifier model to make predictions on our testing data based on the articles' titles, the model was able to categorize which articles were real or fake with a 91% overall accuracy accuracy. Out of the 12,809 test news articles (6,092 real news and 6,717 fake news), our model correctly predicted that 5,553 of the articles were real and 6,148 of the articles were fake. The model incorrectly categorized 548 real articles as fake news and 560 fake articles as real news. The model's precision for predicting real articles was 91%, while its precision for predicting fake news was 92%. Our model's recall values were 91% for real news and 91% for fake news. The F1 score for real news was 91%, while fake news had a score of 92%.
+                    </p><p>
+                      Based on these results, we can see that making predictions based on a new's article's body of text is more effective when compared to its title, due to a larger sample size of words that our vectorizer model can take in. Even with the disparity in the amount of words analyzed by the linear SVC model when testing each of the article's features, it was able to predictions with accuracy greater than 90%.</p>
+                  </div>
+                <br>
 
-                        </div>
+                <div class="main-title">
+                  <p class="font-weight-bold">LVS on Titles - Confusion Matrix</p>  
+                </div>
+                  <div class="text-card">
+                    <div class="image-container">
+                    <img src="../static/LVS_titles.png" alt="My Image"/>
+                    </div>
+                  </div>
+                <br>
+                <br>
+
+                <div class="main-title">
+                  <p class="font-weight-bold">LVS on Titles - Classification Report</p>  
+                </div>
+                <table width="1700" height="400" border="1" cellpadding="10">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Precision</th>
+                        <th>Recall</th>
+                        <th>F1-score</th>
+                        <th>Support</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0</td>
+                        <td>0.91</td>
+                        <td>0.91</td>
+                        <td>0.91</td>
+                        <td>6113</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>0.92</td>
+                        <td>0.92</td>
+                        <td>0.92</td>
+                        <td>6598</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Accuracy</td>
+                        <td>0.91</td>
+                        <td>12809</td>
+                      </tr>
+                      <tr>
+                        <td colspan="1">Macro Avg</td>
+                        <td>0.91</td>
+                        <td>0.91</td>
+                        <td>0.91</td>
+                        <td>12809</td>
+                      </tr>
+                      <tr>
+                        <td colspan="1">Weighted Avg</td>
+                        <td>0.91</td>
+                        <td>0.91</td>
+                        <td>0.91</td>
+                        <td>12809</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
                     </div>
 
                 </div>
