@@ -80,9 +80,69 @@
             <!-- Main -->
             <main class="main-container">
                 <div class="main-title">
+                  <p class="font-weight-bold">INTRODUCTION</p>  
+                </div>
+                
+                <div class="text-card">
+                  <div class="text-container">
+                    <p>
+                        For project 4 on machine learning, we chose to train a model to analyze whether a news article was real or fake. Our original dataset (link provided on resources page) had 6,335 articles with columns for the title, article text, and label. The articles were labeled as ‘real’ or ‘fake.’ Cleaning of text data at its most basic consists of normalizing the text and then removing ‘stopwords.’ Normalizing is removing capitalization, Unicode characters, and punctuation. ‘Stopwords’ are words that don’t have relevance in text interpretation, such as ‘a,’ ‘an,’ and ‘the.’ We used the Natural Language Toolkit (NLTK), a python text cleaning library, to clean the text.
+                    </p><p>
+                        Three models were applied to the cleaned text data: Logistic Regression, Linear Support Vector (LSV), and Keras-Bidirectional Encoder Representations from Transformers (BERT).   
+                    </p><p>
+                        Once the code for cleaning was complete and the models run on the smaller data set, we applied our code to a more robust dataset comprised of 51,233 articles, rough split in half between fake and real articles. 
+                    </p><p>
+                        Basic information on the dataset is below with links to our results in the sidebar.
+                        </p> 
+                    </div>
+                </div>
+                <br>
+
+
+
+            <main class="main-container">
+                <div class="main-title">
                   <p class="font-weight-bold">FAKE NEWS DASHBOARD</p>  
                 </div>
 
+                <div class="main-cards">
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">ARTICLE COUNT - ORIGINAL DATA</p>
+                            <span class="material-icons-outlined text-blue">fact_check</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">6,335</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">ARTICLE COUNT - LARGER DATA SET</p>
+                            <span class="material-icons-outlined text-orange">menu_book</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">51,233</span>   
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">COUNT BY TYPE - ORIGINAL DATA</p>
+                            <span class="material-icons-outlined text-red">vertical_align_top</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">Real: 3,171</span>
+                        <span class="text-primary font-weight-bold">Fake: 3,164</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">COUNT BY TYPE - LARGER DATA SET</p>
+                            <span class="material-icons-outlined text-green">vertical_align_bottom</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">Real: 24,588</span>
+                        <span class="text-primary font-weight-bold">Fake: 26,645</span>
+                    </div>
+
+                </div>
+                
                 <div class="main-cards">
 
                     <div class="card">

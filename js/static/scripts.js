@@ -21,7 +21,7 @@ function closeSidebar () {
 
 var barChartOptions = {
     series: [{
-    data: [3171, 3164]
+    data: [24588, 26645]
   }],
     chart: {
     type: 'bar',
