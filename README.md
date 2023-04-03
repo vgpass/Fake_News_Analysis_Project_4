@@ -29,13 +29,13 @@
 Our data set contains 51,233 articles. Of those articles, 24,588 are real and 26,645 are fake.
 <br></br>
 
-![Article Classification](images/article_count.png)
+![Article Classification](js/static/article_count.png)
 <br></br>
 
 Display of unique words in titles and articles
 <br></br>
 
-![Unique Words](images/unique_words.png)
+![Unique Words](js/static/unique_words.png)
 
 Our dataset was cleaned using the Natural Language Toolkit (NLTK). First, all unwanted characters, numbers, and symbols were removed. Then all words were converted to lowercase. Stopwords were removed, that is words like 'a', 'the', 'in', 'is', etc. The dataframe then underwent lemmatisation, the process where words are reduced to their simplest inflected form. For example, 'kites' gets changed to 'kite'. 'Babies' would be changed to 'baby'.
 
@@ -44,8 +44,8 @@ Once we were satisfied with the state of our cleaned dataframe, we split the dat
 Several models were then used to train and test the data. The first was a logistic regression model, which showed a model accuracy of 91.55%
 <br></br>
 
-![Logistic Regression](images/classification%20report%20-%20lr.png)
+![LR Classification Report](js/static/classification%20report%20-%20lr.png)
 
 Training and Testing results for the logistic model are displayed below.
 
-![LogosticRegression Plot](images/download%20(1).png)
+![LRTrainTest](js/static/download%20(1).png)
