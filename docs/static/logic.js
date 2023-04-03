@@ -1,6 +1,8 @@
 // define url to constant
 
-const url = "../static/big_news_output_sample.csv"
+// const url = "../static/big_news_output_sample.csv"
+const url = "https://media.githubusercontent.com/media/vgpass/Fake_News_Analysis_Project_4/main/docs/static/big_news_output_sample.csv"
+
 const dropdown = d3.select("#selDataset");
 
 // Fetch the CSV data and console log it
