@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>FAKE NEWS MACHINE LEARNING</title>
+
+
+        <!-- PT SANS FONT -->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Montaga&family=Montserrat:wght@100;300;400;500;600;700;800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>FAKE NEWS MACHINE LEARNING</h1>
+                 <p>PROJECT 4</p>
+            </div>
+        </div>
+        <div class="grid-container">
+
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        <span class="material-icons-outlined">inventory</span>FAKE NEWS 
+                    </div>
+                    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+                </div>
+
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-item-current">
+                        <span class="material-icons-outlined">dashboard</span>
+                        <a href="templates/home.html">DASHBOARD</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">fact_check</span>
+                        <a href="templates/common.html">Most Common Words</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">menu_book</span>
+                        <a href="templates/article.html">Original Data Set</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">menu_book</span>
+                        <a href="templates/articles.html">Cleaned Data Set</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_top</span>
+                        <a href="templates/results1.html">Model Results #1</a>
+                    </li>
+                     <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_top</span>
+                        <a href="templates/results2.html">Model Results #2</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">vertical_align_top</span>
+                        <a href="templates/results3.html">Model Results #3</a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">poll</span>
+                        <a href="templates/resources.html">Resources</a>
+                    </li>
+                </ul>
+                <br></br>
+                <ul class="member-list">
+                    <p class="member-list-item">TEAM MEMBERS</p>
+                    <li class="member-list-item">Bruce Chang</li>
+                    <li class="member-list-item">Haithem Elmesallati</li>
+                    <li class="member-list-item">Jonathan Rico</li>
+                    <li class="member-list-item">Tuan Hoang</li>
+                    <li class="member-list-item">Ivan Villa</li>
+                    <li class="member-list-item">Vincent Passanisi</li>
+            </aside>
+            <!-- End Sidebar -->
+
+            <!-- Main -->
+            <main class="main-container">
+                <div class="main-title">
+                  <p class="font-weight-bold">INTRODUCTION</p>  
+                </div>
+                
+                <div class="text-card">
+                  <div class="text-container">
+                    <p>
+                        For project 4 on machine learning, we chose to train a model to analyze whether a news article was real or fake. Our original dataset (link provided on resources page) had 6,335 articles with columns for the title, article text, and label. The articles were labeled as ‘real’ or ‘fake.’ Cleaning of text data at its most basic consists of normalizing the text and then removing ‘stopwords.’ Normalizing is removing capitalization, Unicode characters, and punctuation. ‘Stopwords’ are words that don’t have relevance in text interpretation, such as ‘a,’ ‘an,’ and ‘the.’ We used the Natural Language Toolkit (NLTK), a python text cleaning library, to clean the text.
+                    </p><p>
+                        Three models were applied to the cleaned text data: Logistic Regression, Linear Support Vector (LSV), and Keras-Bidirectional Encoder Representations from Transformers (BERT).   
+                    </p><p>
+                        Once the code for cleaning was complete and the models run on the smaller data set, we applied our code to a more robust dataset comprised of 51,233 articles, rough split in half between fake and real articles. 
+                    </p><p>
+                        Basic information on the dataset is below with links to our results in the sidebar.
+                        </p> 
+                    </div>
+                </div>
+                <br>
+
+
+
+            <main class="main-container">
+                <div class="main-title">
+                  <p class="font-weight-bold">FAKE NEWS DASHBOARD</p>  
+                </div>
+
+                <div class="main-cards">
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">ARTICLE COUNT - ORIGINAL DATA</p>
+                            <span class="material-icons-outlined text-blue">fact_check</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">6,335</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">ARTICLE COUNT - LARGER DATA SET</p>
+                            <span class="material-icons-outlined text-orange">menu_book</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">51,233</span>   
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">COUNT BY TYPE - ORIGINAL DATA</p>
+                            <span class="material-icons-outlined text-red">vertical_align_top</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">Real: 3,171</span>
+                        <span class="text-primary font-weight-bold">Fake: 3,164</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">COUNT BY TYPE - LARGER DATA SET</p>
+                            <span class="material-icons-outlined text-green">vertical_align_bottom</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">Real: 24,588</span>
+                        <span class="text-primary font-weight-bold">Fake: 26,645</span>
+                    </div>
+
+                </div>
+                
+                <div class="main-cards">
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">AVG WORD COUNT - TITLES</p>
+                            <span class="material-icons-outlined text-blue">fact_check</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">8</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">AVG WORD COUNT - ARTICLES</p>
+                            <span class="material-icons-outlined text-orange">menu_book</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">436</span>   
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">MAX WORD COUNT - ARTICLES</p>
+                            <span class="material-icons-outlined text-red">vertical_align_top</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">10,320</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">MIN WORD COUNT - ARTICLES</p>
+                            <span class="material-icons-outlined text-green">vertical_align_bottom</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">0</span>
+                    </div>
+
+                </div>
+
+                <div class="charts">
+
+                    <div class="charts-card">
+                        <p class="charts-title">Number of Articles in the Data Set</p>
+                        <div id="bar-chart"></div>
+                    </div>
+
+                    <div class="charts-card">
+                        <p class="charts-title">Word Counts in Titles and Articles</p>
+                        <div class="image-container">
+                            <img class="select-imgs" src="static/unique_words.png" alt="My Image"/>
+                        </div>
+                    </div>
+
+                    <div class="charts-card">
+                        <p class="charts-title">Distribution of Articles by Length</p>
+                        <div class="image-container">
+                            <img class="select-imgs" src="static/download (2).png" alt="My Image"/>
+                        </div>
+                    </div>
+
+                    <div class="charts-card">
+                        <p class="charts-title">Distribution of Article Length by Type</p>
+                        <div class="image-container">
+                            <img class="select-imgs" src="static/download (3).png" alt="My Image"/>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </main>
+            <!-- End Main-->
+            </div>
+            <!-- Scripts -->
+            <!-- ApexCharts  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.js"></script>
+        <!-- Custom JS -->
+        <script src="static/scripts.js"></script>
+    </body>
+</html>
