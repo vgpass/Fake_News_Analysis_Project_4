@@ -1,6 +1,6 @@
 // define url to constant
 
-const url = "../Resources/big_news_output_sample.csv"
+const url = "../static/big_news_output_sample.csv"
 const dropdown = d3.select("#selDataset");
 
 // Fetch the CSV data and console log it
