@@ -25,7 +25,7 @@ var barChartOptions = {
   }],
     chart: {
     type: 'bar',
-    height: 350,
+    height: 700,
     toolbar: {
       show: false
     },
@@ -46,20 +46,32 @@ var barChartOptions = {
     }
   },
   dataLabels: {
-    enabled: false
+    enabled: false,
+    style: {colors: "#000000"},
   },
   legend: {
     show: false
   },
   xaxis: {
     categories: ['Real', 'Fake'],
-  },
+    labels: {
+      style: {
+          colors: ["#000000"],
+          fontSize: '25px',
+          fontWeight: 400,
+    }}},
   yaxis: {
     title: {
-      text: "Count"
-    }
+      text: "Count",
+      style: {fontSize: '20px'},
+    },
+    labels: {
+      style: {
+          colors: ["#000000"],
+          fontSize: '20px',
+          fontWeight: 300,
   }
-};
+}}};
 
   var barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartOptions);
   barChart.render();
