@@ -91,7 +91,8 @@
 
                 <div class="text-card">
                   <div class="text-container">
-                    <p>Ivan's intro goes here.
+                    <p>BERT stands for Bidirectional Encoder Representations from Transformers. BERT was created by Google AI Language researchers for use in Natural Language Processing (NLP). One of the main benefits of using BERT for NLP is that it learns contextual relationships from words both to the left and right of a word. This differs from directional models which read text in a specific direction (i.e., left to right).
+                      BERT models come in different sizes (configurations of layers and specifications) that can be matched to the size of the data set and the desired speed and computing power required for classification. These models come pre-trained on text from Wikipedia and are fine-tuned based on the training data introduced and the use of an optimizer.
                     </p>
                   </div>
                 </div>
@@ -100,7 +101,13 @@
                   <p class="font-weight-bold">BERT Model Summary</p>  
                 </div>
                 <br>
-
+                <div class="text-card">
+                  <div class="text-container">
+                    <p>For the classification of Fake News, the most efficient model was the smallest of the TensorFlow Small BERT group of models. It uses L=2 hidden layers (i.e., Transformer blocks), a hidden size of H=128, and A=2 attention heads. Using our expanded dataset, this produced a high accuracy at the minimal amount of training time and computing resources.
+                    </p>
+                  </div>
+                </div>
+                <br>
                 <style>
                   table {
                     width: 100%;
@@ -189,7 +196,24 @@
                       <img src="../static/bert_acc_graph.png" alt="My Image"/>
                       </div>
                     </div>
-                  
+                    <br>
+
+                    <div class="main-title">
+                      <p class="font-weight-bold">BERT Model Confusion Matrix</p>  
+                    </div>
+    
+                    <div class="text-card">
+                      <div class="text-container">
+                        <p>From 5296 counts, the model algorithm only correctly predicted 5157 counts to be fake and the other 139 to be real. On the other hand, the algorithm predicted only 4759 of the 4951 counts to be, meaning it got a whopping 192 counts wrong.
+                        </p>
+                      </div>
+                    </div>
+    
+                      <div class="text-card">
+                        <div class="image-container">
+                        <img src="../static/LRConfusion.png" alt="My Image"/>
+                        </div>
+                      </div>
 
                   <div class="main-title">
                     <p class="font-weight-bold">Classification Report</p>  
