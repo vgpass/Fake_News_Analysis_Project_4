@@ -364,7 +364,7 @@ table {
   justify-content: center;
 }
 
-
+/* class for images in home and common pages */
 .select-imgs {
     width: 100%;
     object-fit: scale-down;
