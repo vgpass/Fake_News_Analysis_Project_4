@@ -23,13 +23,13 @@
 
 <br>
 
-## INTRODUCTION
+## **INTRODUCTION**
 
-This is the repository for Project 4 of the UCI DATA ANALYTICS BOOTCAMP. Our presentation webpages can be found here: [Fake News Machine Learning](https://vgpass.github.io/Fake_News_Analysis_Project_4/)
+This is the repository for Project 4 of the UCI DATA ANALYTICS BOOTCAMP. Our presentation web pages can be found here: [Fake News Machine Learning](https://vgpass.github.io/Fake_News_Analysis_Project_4/)
 
 <br>
 
-## PROJECT PROPOSAL
+## **PROJECT PROPOSAL**
 
 ### ***Identifying Fake News using Natural Language Processing***
 
@@ -41,36 +41,80 @@ This is the repository for Project 4 of the UCI DATA ANALYTICS BOOTCAMP. Our pre
 
 *Conclusion*: The proposed project will contribute to the development of accurate tools for identifying fake news and help to combat the spread of misinformation on social media platforms. The machine learning model developed through this project could be used by news organizations, social media platforms, and individuals to distinguish between real and fake news articles, thus promoting informed decision-making and reducing the spread of misinformation.
 
-## WORK PROCESS
+<br>
 
-We initially found a dataset on Kaggle with just over six thousand entries. This initial data was used to create notebooks that would clean the data and prepare it for our machine learning models.
+## **WORK PROCESS**
 
-Our data set contains 51,233 articles. Of those articles, 24,588 are real and 26,645 are fake.
+We initially found a dataset on Kaggle with just over six thousand entries. This initial data was used to create notebooks that would clean the data and prepare it for our machine learning models. Data Cleaning for Natural Language Processing (NLP) is comprised of modifying the text so that a computer can "understand" it. The process requires the removal of stopwords which are words like 'a', 'an', and 'the'. Unicode text such as punctuation must also be removed, and the text normalized by removing capitalization. Finally the text must undergo two cleaning processes called stemming and lemmatization. In stemming, words are reduced to their simplest inflected form. For example, the words 'walked' and 'walking' become 'walk.' In lemmatization, the same process occurs, but the tense of the word is preserved to assist in interpretation. An example would be the word 'walking,' would become 'walk.' But the word 'walked' would produce the output 'walked.'
+
+Python has a library called the Natural Language Toolkit (NLTK), that further prepares a text for machine learning. This toolkit does things like tagging words by parts of speech, fixing misspellings, and sorting the text in ways that will assist the machine learning algorithm. Once we were satisfied with the state of our cleaned dataframe, we split the data into training and test sets using a default 75/25 split. Then both sets were transformed using a scikit-learn feature called *TfidfVectorizer*. This feature creates a matrix of Term Frequency-Inverse Document Frequency. In simple terms, words are given proportional relevance for the number of times they appear in a text, and then this relevance is compensated by the word's frequency in the entire data set. This README is not intended to be a complete introduction to the process and more can be found at sites such as this one [MonkeyLearn Natural Language Processing (NLP): What Is It & How Does it Work?](https://monkeylearn.com/natural-language-processing/).
+
+Once we were satisfied with the state of our data, we started experimenting with various models and settled on three for the machine learning process: Logistic Regression, Linear Support Vector (LSV), and a mchine learning algorithm from the Keras library called Bidirectional Encoder Representations from Transformers (BERT).
+
+When we were satified with our code to be used for text cleaning, and running the models, we applied our work to a much larger dataset, also found on Kaggle This data set contains 51,233 articles. Of those articles, 24,588 are real and 26,645 are fake. The much larger data set required much more time and computation power. The BERT model inially took a few hours to run, and needed to be run on Google Collab. The results of machine learning models can be found here [Model #1](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results1.html), here [Model #2](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results2.html), and here [Model #3](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results3.html).
+
+<br>
+
+## **PRESENTATION WEB PAGES**
+
+We chose to present our analysis and visualizations using html. Our home page consists of a brief introduction and dashboard that highlights some of the characteristics of our larger data set. Along the sidebar are options to visit more in depth
+<br></br><br>
+
+![dashboard picture](docs/static/dashboard.png)
+
+<br></br><br>
+
+### The side bar navigation has the following options:
+
+* **Dashboard** - Project Introduction and dashboard of basic information.
+* **Common Words** - More in-depth analysis of the data characteristics.
+* **Original Text Data** - A sample of the original text data *before* cleaning.
+* **Cleaned Text Data** - A sample of the original text data *after* cleaning.
+* **Results Model #1** - Results and analysis of the Logistic Regression model.
+* **Results Model #2** - Results and analysis of the Linear Support Vector model.
+* **Results Model #3** - Results and analysis of the Keras-Bert model.
+* **Resources** - Contains links to our data sets and a list of the python libraries, machine learning tools, and wesite tools used in our project.
+
+<br></br>
+
+## Below are a few highlights from our analysis.
+
+<br>
+
+### Dashboard Image of Article Classification
+
 <br></br>
 
 ![Article Classification](docs/static/article_count.png)
 <br></br>
 
-Display of unique words in titles and articles
+### Count of Unique Words in Titles and Articles
 <br></br>
 
 ![Unique Words](docs/static/unique_words.png)
 <br></br>
 
-Our dataset was cleaned using the Natural Language Toolkit (NLTK). First, all unwanted characters, numbers, and symbols were removed. Then all words were converted to lowercase. Stopwords were removed, that is words like 'a', 'the', 'in', 'is', etc. The dataframe then underwent lemmatisation, the process where words are reduced to their simplest inflected form. For example, 'kites' gets changed to 'kite'. 'Babies' would be changed to 'baby'.
-
-Once we were satisfied with the state of our cleaned dataframe, we split the data into training and test sets using a default 75/25 split. Then both sets were transformed using a scikit-learn feature called TfidfVectorizer. This feature creates a matrix of Term Frequency-Inverse Document Frequency. In simple terms, words are given proportional relevance for the number of times they appear in a text, and then this relevance is compensated by the word's frequency in the entire data set.
-
-Several models were then used to train and test the data. The first was a logistic regression model, which showed a model accuracy of 91.55%
+### Classification Report for the LSV Model
 <br></br>
 
-![LR Classification Report](docs/static/classification%20report%20-%20lr.png)
+![LR Classification Report](docs/static/LRClass.png)
 
 <br></br>
 
-Training and Testing results for the logistic model are displayed below.
+### Training and Testing results for the Logistic Regression model 
 <br></br>
 
 ![LRTrainTest](docs/static/download%20(1).png)
 
+<br></br>
 
+### Confusion Matrix for the BERT model
+<br></br>
+
+![BERT Confusion Matrix](docs/static/bertCM.png)
+
+<br></br>
+
+## **FINAL COMMENTS AND THOUGHTS**
+<br>
+Our project progressed rapidly, in part due to the highly competent composition of our group. The team was always professional, communicated well, and exhibited an intellectual curiosity that drove us to acheive far better results than we initially thought possible. There was a great deal of experimentation with our models; and admittedly, many failed spectacularly. A little competition spurred each member to try to better the results of his teammates--all in good form. Beer drinking and trips to Disneyland were kept to a minimum, at least until the final days of the project. It must be noted that even those of us with small children did not let interruptions divert us from the task at hand. In our Zoom meetings, crying babies were quickly dealt with, except in those cases where the crying came from team members. It was a lot of fun, and I'm certain we would all choose to work with each other again. Thank you to all!
