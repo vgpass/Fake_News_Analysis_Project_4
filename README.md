@@ -45,19 +45,19 @@ This is the repository for Project 4 of the UCI DATA ANALYTICS BOOTCAMP. Our pre
 
 ## **WORK PROCESS**
 
-We initially found a dataset on Kaggle with just over six thousand entries. This initial data was used to create notebooks that would clean the data and prepare it for our machine learning models. Data Cleaning for Natural Language Processing (NLP) is comprised of modifying the text so that a computer can "understand" it. The process requires the removal of stopwords which are words like 'a', 'an', and 'the'. Unicode text such as punctuation must also be removed, and the text normalized by removing capitalization. Finally the text must undergo two cleaning processes called stemming and lemmatization. In stemming, words are reduced to their simplest inflected form. For example, the words 'walked' and 'walking' become 'walk.' In lemmatization, the same process occurs, but the tense of the word is preserved to assist in interpretation. An example would be the word 'walking,' would become 'walk.' But the word 'walked' would produce the output 'walked.'
+We initially found a dataset on Kaggle with just over six thousand entries. This initial data was used to create notebooks that would clean the data and prepare it for our machine learning models. Data Cleaning for Natural Language Processing (NLP) is comprised of modifying the text so that a computer can "understand" it. The process requires the removal of stopwords which are words like 'a', 'an', and 'the'. Unicode text such as punctuation must also be removed, and the text normalized by removing capitalization. Finally the text must undergo two cleaning processes called stemming and lemmatization. In stemming, words are reduced to their simplest inflected form. For example, the words 'walked' and 'walking' become 'walk.' In lemmatization, the same process occurs, but the tense of the word is preserved to assist in interpretation. An example is the word 'walking,' becomes 'walk,' but the word 'walked' produces the output 'walked.'
 
 Python has a library called the Natural Language Toolkit (NLTK), that further prepares a text for machine learning. This toolkit does things like tagging words by parts of speech, fixing misspellings, and sorting the text in ways that will assist the machine learning algorithm. Once we were satisfied with the state of our cleaned dataframe, we split the data into training and test sets using a default 75/25 split. Then both sets were transformed using a scikit-learn feature called *TfidfVectorizer*. This feature creates a matrix of Term Frequency-Inverse Document Frequency. In simple terms, words are given proportional relevance for the number of times they appear in a text, and then this relevance is compensated by the word's frequency in the entire data set. This README is not intended to be a complete introduction to the process and more can be found at sites such as this one [MonkeyLearn Natural Language Processing (NLP): What Is It & How Does it Work?](https://monkeylearn.com/natural-language-processing/).
 
-Once we were satisfied with the state of our data, we started experimenting with various models and settled on three for the machine learning process: Logistic Regression, Linear Support Vector (LSV), and a mchine learning algorithm from the Keras library called Bidirectional Encoder Representations from Transformers (BERT).
+Once we were satisfied with the state of our data, we began experimenting with various models and settled on three for the machine learning process: Logistic Regression, Linear Support Vector (LSV), and a machine learning algorithm from the Keras library called Bidirectional Encoder Representations from Transformers (BERT).
 
-When we were satified with our code to be used for text cleaning, and running the models, we applied our work to a much larger dataset, also found on Kaggle This data set contains 51,233 articles. Of those articles, 24,588 are real and 26,645 are fake. The much larger data set required much more time and computation power. The BERT model inially took a few hours to run, and needed to be run on Google Collab. The results of machine learning models can be found here [Model #1](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results1.html), here [Model #2](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results2.html), and here [Model #3](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results3.html).
+When we determined our code could successfully be used for text cleaning and running the models, we applied our work to a much larger dataset, also found on Kaggle This data set contained 51,233 articles. Of those articles, 24,588 were real and 26,645 were fake. The much larger data set required much more time and computation power. The BERT model initially took a few hours to run, and needed to be run on Google Collab. The results of our machine learning models can be found here [Model #1](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results1.html), here [Model #2](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results2.html), and here [Model #3](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results3.html).
 
 <br>
 
 ## **PRESENTATION WEB PAGES**
 
-We chose to present our analysis and visualizations using html. Our home page consists of a brief introduction and dashboard that highlights some of the characteristics of our larger data set. Along the sidebar are options to visit more in depth
+We chose to present our analysis and visualizations using html. Our home page consists of a brief introduction and a dashboard that highlights some of the characteristics of our larger data set. The sidebar has options to visit other pages with additional analysis and visualizations.
 <br></br><br>
 
 ![dashboard picture](docs/static/dashboard.png)
@@ -66,14 +66,14 @@ We chose to present our analysis and visualizations using html. Our home page co
 
 ### The side bar navigation has the following options:
 
-* **Dashboard** - Project Introduction and dashboard of basic information.
-* **Common Words** - More in-depth analysis of the data characteristics.
-* **Original Text Data** - A sample of the original text data *before* cleaning.
-* **Cleaned Text Data** - A sample of the original text data *after* cleaning.
-* **Results Model #1** - Results and analysis of the Logistic Regression model.
-* **Results Model #2** - Results and analysis of the Linear Support Vector model.
-* **Results Model #3** - Results and analysis of the Keras-Bert model.
-* **Resources** - Contains links to our data sets and a list of the python libraries, machine learning tools, and wesite tools used in our project.
+* [**Dashboard**](https://vgpass.github.io/Fake_News_Analysis_Project_4/) - Project Introduction and dashboard of basic information.
+* [**Common Words**](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/common.html) - More in-depth analysis of the data characteristics.
+* [**Original Text Data**](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/article.html) - A sample of the original text data *before* cleaning.
+* [**Cleaned Text Data**](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/articles.html) - A sample of the original text data *after* cleaning.
+* [**Results Model #1**](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results1.html) - Results and analysis of the Logistic Regression model.
+* [**Results Model #2**](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results2.html) - Results and analysis of the Linear Support Vector model.
+* [**Results Model #3**](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/results3.html) - Results and analysis of the Keras-Bert model.
+* [**Resources**](https://vgpass.github.io/Fake_News_Analysis_Project_4/templates/resources.html) - Contains links to our data sets and a list of the python libraries, machine learning tools, and wesite tools used in our project.
 
 <br></br>
 
