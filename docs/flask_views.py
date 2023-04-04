@@ -15,6 +15,12 @@ def common():
 @app.route("/common.html")
 def commonHTML():
     return render_template("common.html")
+@app.route("/article")
+def article():
+    return render_template("article.html")
+@app.route("/article.html")
+def articleHTML():
+    return render_template("article.html")
 @app.route("/articles")
 def articles():
     return render_template("articles.html")

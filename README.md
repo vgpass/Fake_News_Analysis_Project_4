@@ -1,6 +1,13 @@
-# **Identifying Fake News**
+# **IDENTIFYING FAKE NEWS**
 
-## ***Repo for project 4***
+## ***Repository for Project 4***
+
+### **Due April 5, 2023**
+
+---
+<br>
+
+<u>**TEAM MEMBERS**</u>
 
 **Bruce Chang**
 
@@ -14,6 +21,14 @@
 
 **Vincent Passanisi**
 
+<br>
+
+## INTRODUCTION
+
+This is the repository for Project 4 of the UCI DATA ANALYTICS BOOTCAMP. Our presentation webpages can be found here: [Fake News Machine Learning](https://vgpass.github.io/Fake_News_Analysis_Project_4/)
+
+<br>
+
 ## PROJECT PROPOSAL
 
 ### ***Identifying Fake News using Natural Language Processing***
@@ -26,6 +41,10 @@
 
 *Conclusion*: The proposed project will contribute to the development of accurate tools for identifying fake news and help to combat the spread of misinformation on social media platforms. The machine learning model developed through this project could be used by news organizations, social media platforms, and individuals to distinguish between real and fake news articles, thus promoting informed decision-making and reducing the spread of misinformation.
 
+## WORK PROCESS
+
+We initially found a dataset on Kaggle with just over six thousand entries. This initial data was used to create notebooks that would clean the data and prepare it for our machine learning models.
+
 Our data set contains 51,233 articles. Of those articles, 24,588 are real and 26,645 are fake.
 <br></br>
 
@@ -36,6 +55,7 @@ Display of unique words in titles and articles
 <br></br>
 
 ![Unique Words](docs/static/unique_words.png)
+<br></br>
 
 Our dataset was cleaned using the Natural Language Toolkit (NLTK). First, all unwanted characters, numbers, and symbols were removed. Then all words were converted to lowercase. Stopwords were removed, that is words like 'a', 'the', 'in', 'is', etc. The dataframe then underwent lemmatisation, the process where words are reduced to their simplest inflected form. For example, 'kites' gets changed to 'kite'. 'Babies' would be changed to 'baby'.
 
@@ -46,6 +66,11 @@ Several models were then used to train and test the data. The first was a logist
 
 ![LR Classification Report](docs/static/classification%20report%20-%20lr.png)
 
+<br></br>
+
 Training and Testing results for the logistic model are displayed below.
+<br></br>
 
 ![LRTrainTest](docs/static/download%20(1).png)
+
+
