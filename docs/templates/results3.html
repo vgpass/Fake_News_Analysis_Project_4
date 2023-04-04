@@ -87,57 +87,168 @@
                 <div class="main-title">
                   <p class="font-weight-bold">Results Model #3 - Keras-BERT (Bidirectional Encoder Representations from Transformers)</p>  
                 </div>
-            
+                <br>
 
+                <div class="text-card">
+                  <div class="text-container">
+                    <p>Ivan's intro goes here.
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="main-title">
+                  <p class="font-weight-bold">BERT Model Summary</p>  
+                </div>
+                <br>
 
-                <table>
+                <style>
+                  table {
+                    width: 100%;
+                    border-collapse: collapse;
+                  }
+                  
+                  th, td {
+                    text-align: left;
+                    padding: 8px;
+                    border: 1px solid #ddd;
+                  }
+                  
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                  </style>
+                  
+                  <table>
                     <thead>
                       <tr>
-                        <th>Model</th>
                         <th>Layer (type)</th>
                         <th>Output Shape</th>
                         <th>Param #</th>
+                        <th>Connected to</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>sequential</td>
-                        <td>dense</td>
-                        <td>(None, 8)</td>
-                        <td>296</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>dense_1</td>
-                        <td>(None, 5)</td>
-                        <td>45</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>dense_2</td>
-                        <td>(None, 1)</td>
-                        <td>6</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>Total</td>
-                        <td></td>
-                        <td>347</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>Trainable</td>
-                        <td></td>
-                        <td>347</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>Non-trainable</td>
-                        <td></td>
+                        <td>input_1 (InputLayer)</td>
+                        <td>[(None,)]</td>
                         <td>0</td>
+                        <td>[]</td>
+                      </tr>
+                      <tr>
+                        <td>keras_layer (KerasLayer)</td>
+                        <td>{'input_mask': (None, 128), 'input_word_ids': (None, 128), 'input_type_ids': (None, 128)}</td>
+                        <td>0</td>
+                        <td>['input_1[0][0]']</td>
+                      </tr>
+                      <tr>
+                        <td>keras_layer_1 (KerasLayer)</td>
+                        <td>{'default': (None, 128), 'encoder_outputs': [(None, 128, 128), (None, 128, 128)], 'pooled_output': (None, 128), 'sequence_output': (None, 128, 128)}</td>
+                        <td>4,385,921</td>
+                        <td>['keras_layer[0][0]', 'keras_layer[0][1]', 'keras_layer[0][2]']</td>
+                      </tr>
+                      <tr>
+                        <td>classifier (Dense)</td>
+                        <td>(None, 1)</td>
+                        <td>129</td>
+                        <td>['keras_layer_1[0][3]']</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Total params</td>
+                        <td>4,386,050</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Trainable params</td>
+                        <td>4,386,049</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Non-trainable params</td>
+                        <td>1</td>
+                        <td></td>
                       </tr>
                     </tbody>
-                  </table>    
+                  </table> 
+                  
+                  <div class="main-title">
+                    <p class="font-weight-bold">Results of training and testing model</p>  
+                  </div>
+  
+                  <div class="text-card">
+                    <div class="text-container">
+                      <p>Ivan's text goes here.
+                      </p>
+                    </div>
+                  </div>
+  
+                    <div class="text-card">
+                      <div class="image-container">
+                      <img src="../static/bert_acc_graph.png" alt="My Image"/>
+                      </div>
+                    </div>
+                  
+
+                  <div class="main-title">
+                    <p class="font-weight-bold">Classification Report</p>  
+                  </div>
+  
+                  <div class="text-card">
+                    <div class="text-container">
+                      <p>The model accuracy was 95% indicating that it contains more power to confirm the hypothesis about the disparity between fake and real news.
+                      </p>
+                    </div>
+                  </div>
+  
+                  <table width="1700" height="400" border="1" cellpadding="10">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Precision</th>
+                          <th>Recall</th>
+                          <th>F1-score</th>
+                          <th>Support</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>0</td>
+                          <td>0.97</td>
+                          <td>0.93</td>
+                          <td>0.95</td>
+                          <td>6190</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>0.94</td>
+                          <td>0.98</td>
+                          <td>0.96</td>
+                          <td>6451</td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">Accuracy</td>
+                          <td>0.95</td>
+                          <td>12641</td>
+                        </tr>
+                        <tr>
+                          <td colspan="1">Macro Avg</td>
+                          <td>0.96</td>
+                          <td>0.95</td>
+                          <td>0.95</td>
+                          <td>12641</td>
+                        </tr>
+                        <tr>
+                          <td colspan="1">Weighted Avg</td>
+                          <td>0.96</td>
+                          <td>0.95</td>
+                          <td>0.95</td>
+                          <td>12641</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br>      
             </main>
             <!-- End Main-->
             </div>
