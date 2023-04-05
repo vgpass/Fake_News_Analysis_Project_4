@@ -109,9 +109,21 @@
                 <div class="row">
                     <div class="col-md-2">
                       <div class="well">
-                        <h2>News Article ID No.:</h2>
-                        <select id="selDataset" onchange="optionChanged(this.value)" style="width: 90px"></select>
+                        <div style="display: flex;">
+                          <div style="flex: 1;">
+                            <h2>News Article ID No.:</h2>
+                            <select id="selDataset" onchange="optionChanged(this.value)" style="width: 90px"></select>
+                          </div>
+                          <div style="flex: 1;">
+                            <h2>Article Label:</h2>
+                            <div id="real-fake" style="width: 90px"></div>
+                              <!-- <option value="real" style="color: #0000FF;">Real</option>
+                              <option value="fake" style="color: #FF0000;">Fake</option> -->
+                            <!-- </select> -->
+                          </div>
+                        </div>
                       </div>
+
                       <br><br>
                         <div id="sample-metadata" class="panel-body"></div>
                       </div>
