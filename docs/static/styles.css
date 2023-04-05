@@ -250,6 +250,10 @@ table {
     font-size: 36px;
 }
 
+#real-fake {
+    font-size: 40px;
+    font-weight: bold;
+}
 
 /*  Cards Style Settings */
 .main-cards {
